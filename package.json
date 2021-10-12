@@ -1,0 +1,107 @@
+{
+  "name": "@dts-stn/decd-design-system",
+  "version": "1.0.0",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "source": "src/index.js",
+  "repository": {
+    "url": "https://github.com/DTS-STN/DECD-Design-System"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "fetch-mock": "^9.11.0",
+    "joi": "^17.4.2",
+    "react-scripts": "4.0.3"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c",
+    "build-watch": "rollup -c -w",
+    "i-all": "npm i && cd playground && npm i",
+    "dev": "npm-run-all --parallel build-watch start-playground",
+    "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
+    "test:unit": "jest --forceExit",
+    "pre-commit": "lint-staged",
+    "lint": "prettier --write \"*.{js,md}\" --write \".storybook/**/*.{js,jsx,ts,tsx,json,md,css}\" --write \"playground/**/*.{js,jsx,ts,tsx,json,md,css}\" --write \"src/**/*.{js,jsx,ts,tsx,json,md}\"",
+    "prepare": "husky install",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,md,css}": [
+      "prettier --write"
+    ],
+    ".storybook/**/*.{js,jsx,ts,tsx,json,md,css}": [
+      "prettier --write"
+    ],
+    "playground/**/*.{js,jsx,ts,tsx,json,md,css}": [
+      "prettier --write"
+    ],
+    "*.{js,md}": [
+      "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@storybook/addon-a11y": "^6.3.7",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.7",
+    "@tailwindcss/postcss7-compat": "^2.1.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-polyfill-corejs2": "^0.2.2",
+    "babel-plugin-polyfill-corejs3": "^0.2.2",
+    "babel-plugin-polyfill-regenerator": "^0.2.2",
+    "husky": "^6.0.0",
+    "jest-axe": "^5.0.1",
+    "lint-staged": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.36",
+    "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^1.32.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^2.8.2",
+    "rollup-plugin-uglify": "^6.0.4",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4"
+  }
+}
