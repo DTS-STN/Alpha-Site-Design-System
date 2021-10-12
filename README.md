@@ -2,8 +2,9 @@
 ![Version](https://img.shields.io/github/package-json/v/dts-stn/decd-design-system)
 [![Documentation Tool](https://img.shields.io/badge/Documentation%20Tool-storybooks-pink)](https://dts-stn.github.io/DECD-Design-System/master)
 
+*This repository is a snapshot of the [DECD Design System](https://github.com/DTS-STN/DECD-Design-System). The components found here are what SC Labs is using*
 
-# DECD Design System Component Library 🎨
+# Alpha Site Design System Component Library 🎨
 
 This repository contains the source code for the React component library which corresponds to DECD designs following the [canada.ca guidelines](https://www.canada.ca/en/government/about/design-system.html).
 
